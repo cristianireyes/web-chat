@@ -24,8 +24,8 @@ window.onload = function() {
   var messages = [
     'Hola 👋',
     'Mi nombre es Cristian',
-    'Me dedico a diseñar y desarrollar páginas web',
-    'Realizo trabajos para <a href="https://velksdesign.com">velksdesign</a> y de manera freelance.<br> Podés contactarme en <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
+    'Me dedico a diseñar y<br> desarrollar páginas web',
+    'Realizo trabajos para <a href="https://velksdesign.com">velksdesign</a><br> y de manera freelance.<br> Podés contactarme en<br> <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
     'Mis redes sociales son:<br>🐤 <a target="_blank" href="https://twitter.com/crisstianir">twitter.com/crisstianir</a><br>💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a>',
     getCurrentTime(),
     '👀 CR.'
