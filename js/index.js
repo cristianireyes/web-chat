@@ -1,9 +1,3 @@
-/*
- * This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/.
- * Copyright (c) 2016 Julian Garnier
- */
-
 window.onload = function() {
 
   var messagesEl = document.querySelector('.messages');
@@ -15,29 +9,30 @@ window.onload = function() {
     var date = new Date();
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
-    var current = hours + (minutes * .01);
-    if (current >= 5 && current < 12) return 'Que tenga un buen dia';
-    if (current >= 12 && current < 19) return 'Que tenga una buena tarde';
-    if (current >= 19 || current < 5) return 'Que tenga buenas noches';
-  }
+    var current = hours + (minutes * 0.01);
+    if (current >= 5 && current < 12) return 'Que tengas un buen d&iacute;a';
+    if (current >= 12 && current < 19) return 'Que tengas una buena tarde';
+    if (current >= 19 || current < 5) return 'Que tengas buenas noches';
+  };
 
   var messages = [
     'Hola 👋',
-    'Mi nombre es Cristian',
-    'Me dedico a diseñar y<br> desarrollar páginas web',
-    'Realizo trabajos para <a href="https://velksdesign.com">velksdesign</a><br> y de manera freelance.<br> Podés contactarme en<br> <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
-    'Mis redes sociales son:<br>🐤 <a target="_blank" href="https://twitter.com/crisstianir">twitter.com/crisstianir</a><br>💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a>',
+    'Mi nombre es Cristian Reyes',
+    'Soy desarrollador web y mobile.<br>Actualmente utilizo Java y Javascript<br>como lenguajes principales.',
+    'Como frameworks de frontend utilizo<br> Angular e Ionic.',
+    'Si quer&eacute;s que conversemos pod&eacute;s<br>contactarme en<br> <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
+    'Mis redes sociales son:<br>💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a>',
     getCurrentTime(),
     '👀 CR.'
-  ]
+  ];
 
   var getFontSize = function() {
     return parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
-  }
+  };
 
   var pxToRem = function(px) {
     return px / getFontSize() + 'rem';
-  }
+  };
 
   var createBubbleElements = function(message, position) {
     var bubbleEl = document.createElement('div');
@@ -58,8 +53,8 @@ window.onload = function() {
       bubble: bubbleEl,
       message: messageEl,
       loading: loadingEl
-    }
-  }
+    };
+  };
 
   var getDimentions = function(elements) {
     return dimensions = {
@@ -75,8 +70,8 @@ window.onload = function() {
         w: pxToRem(elements.message.offsetWidth + 4),
         h: pxToRem(elements.message.offsetHeight)
       }
-    }
-  }
+    };
+  };
 
   var sendMessage = function(message, position) {
     var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + 500;
@@ -107,7 +102,7 @@ window.onload = function() {
     });
     var loadingLoop = anime({
       targets: elements.bubble,
-      scale: [1.05, .95],
+      scale: [1.05, 0.95],
       duration: 1100,
       loop: true,
       direction: 'alternate',
@@ -116,7 +111,7 @@ window.onload = function() {
     var dotsStart = anime({
       targets: elements.loading,
       translateX: ['-2rem', '0rem'],
-      scale: [.5, 1],
+      scale: [0.5, 1],
       duration: 400,
       delay: 25,
       easing: 'easeOutElastic',
@@ -124,11 +119,11 @@ window.onload = function() {
     var dotsPulse = anime({
       targets: elements.bubble.querySelectorAll('b'),
       scale: [1, 1.25],
-      opacity: [.5, 1],
+      opacity: [0.5, 1],
       duration: 300,
       loop: true,
       direction: 'alternate',
-      delay: function(i) {return (i * 100) + 50}
+      delay: function(i) {return (i * 100) + 50;}
     });
     setTimeout(function() {
       loadingLoop.pause();
@@ -157,9 +152,9 @@ window.onload = function() {
         begin: function() {
           if (messageIndex < messages.length) elements.bubble.classList.remove('cornered');
         }
-      })
+      });
     }, loadingDuration - 50);
-  }
+  };
 
   var sendMessages = function() {
     var message = messages[messageIndex];
@@ -167,8 +162,8 @@ window.onload = function() {
     sendMessage(message);
     ++messageIndex;
     setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
-  }
+  };
 
   sendMessages();
 
-}
+};
