@@ -18,10 +18,12 @@ window.onload = function() {
   var messages = [
     'Hola 👋',
     'Mi nombre es Cristian Reyes',
-    'Soy desarrollador web y mobile.<br>Actualmente utilizo Java y Javascript<br>como lenguajes principales.',
-    'Como frameworks de frontend utilizo<br> Angular e Ionic.',
-    'Si quer&eacute;s que conversemos pod&eacute;s<br>contactarme en<br> <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
-    'Mis redes sociales son:<br>💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a>',
+    'Soy desarrollador Frontend y Mobile.',
+    'Tengo conocimientos sobre Angular, Ionic,</br>Android Nativo y Java',
+    'Me podes contactar en:<br>\
+    💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>\
+    💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a><br>\
+    📧 <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
     getCurrentTime(),
     '👀 CR.'
   ];
