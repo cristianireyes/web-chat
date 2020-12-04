@@ -4,26 +4,27 @@ window.onload = function() {
   var typingSpeed = 20;
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
   var messageIndex = 0;
+  var linkedin = '💼 <a target="_blank" href="https://.">linkedin.com/cristianir</a>';
+  var github = '💻 <a target="_blank" href="https://">github.com/cristianireyes</a>';
+  var email = '📧 <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>';
 
   var getCurrentTime = function() {
     var date = new Date();
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * 0.01);
-    if (current >= 5 && current < 12) return 'Que tengas un buen d&iacute;a';
-    if (current >= 12 && current < 19) return 'Que tengas una buena tarde';
-    if (current >= 19 || current < 5) return 'Que tengas buenas noches';
+    if (current >= 5 && current < 12) return 'You have a good day';
+    if (current >= 12 && current < 20) return 'Have a nice evening';
+    if (current >= 20 || current < 5) return 'Have a good night';
   };
 
+  //'I like Angular, React, Ionic, NodeJs,</br> Java and Swift among others',
   var messages = [
-    'Hola 👋',
-    'Mi nombre es Cristian Reyes',
-    'Soy desarrollador Frontend y Mobile.',
-    'Tengo conocimientos sobre Angular, Ionic,</br>Android Nativo y Java',
-    'Me podes contactar en:<br>\
-    💼 <a target="_blank" href="https://www.linkedin.com/in/cristianir/">linkedin.com/cristianir</a><br>\
-    💻 <a target="_blank" href="https://github.com/cristianireyes">github.com/cristianireyes</a><br>\
-    📧 <a href="mailto:cristianir.dev@gmail.com">cristianir.dev@gmail.com</a>',
+    'Hi 👋',
+    'My name is Cristian Reyes',
+    'I am a frontend and mobile developer',
+    'I like Angular, React, Ionic, NodeJs, Java and Swift among others',
+    `You can contact me at:<br>${ linkedin }<br>${ github }<br>${ email }`,
     getCurrentTime(),
     '👀 CR.'
   ];

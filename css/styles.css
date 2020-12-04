@@ -17,8 +17,22 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #33333D;
 }
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.copyright {
+  color: #b3b2c2;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: visible;
+}
 .messages {
-  overflow: auto;
+  overflow: visible;
   width: 100vw;
   max-height: 100vh;
   padding: 1rem .9rem;
@@ -61,6 +75,7 @@ body {
 }
 .bubble span.message {
   opacity: 0;
+  white-space: break-spaces;
 }
 .bubble a {
   color: #33333D;
